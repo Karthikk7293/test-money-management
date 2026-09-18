@@ -1,16 +1,27 @@
-# expense_manager
+# Expense Manager
 
-A new Flutter project.
+Flutter expense manager with BLoC state management, SQLite persistence, categories, transactions, notifications, and API-backed authentication.
 
-## Getting Started
+## Project scope
 
-This project is a starting point for a Flutter application.
+Local data uses SQLite and shared preferences. Remote authentication and transaction endpoints are declared in [api_constants.dart](lib/core/constants/api_constants.dart); those flows require the configured service to be available.
 
-A few resources to get you started if this is your first Flutter project:
+## Run locally
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Use a Flutter installation whose Dart SDK satisfies `pubspec.yaml`. Configure any services described above before starting the app.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```sh
+flutter pub get
+flutter run
+```
+
+## Source guide
+
+- [lib/main.dart](lib/main.dart)
+
+## Checks
+
+```sh
+flutter analyze
+flutter test
+```
